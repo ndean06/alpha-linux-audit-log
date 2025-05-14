@@ -11,7 +11,7 @@ This walkthrough guides you through the step-by-step investigation of a compromi
 ### 1️⃣ Change to the Lab Directory
 
 ```bash
-cd /sec401/labs/6.3
+cd /path/to/lab/script
 ```
 
 📸 *(Insert screenshot here)*
