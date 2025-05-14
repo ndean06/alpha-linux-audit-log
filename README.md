@@ -60,8 +60,7 @@ This project documents a log-based investigation of a compromised Linux web serv
 
 ---
 
-## 📁 Project Structure (Suggested)
-
+## 📁 Project Structure
 ```
 alpha-linux-audit-log/
 ├── README.md
