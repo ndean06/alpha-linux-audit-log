@@ -54,8 +54,9 @@ These audit rules log **reconnaissance activity**:
 ```bash
 aureport --input ./audit.log --summary
 ```
+![Gen audit log summary report](screenshots/review_audit_log.png)
+>💡 *Useful for getting a quick overview of what kinds of system events were captured (Displays counts of logins, executed commands, etc.).*
 
-Displays counts of logins, executed commands, etc.
 
 ### 4️⃣ Summary Grouped by Key
 
@@ -74,8 +75,6 @@ gedit audit.log &
 ```
 
 Useful for inspecting structure: each event may span multiple `type=` lines with a shared `event ID`.
-
-📸 *(Insert screenshot here)*
 
 ---
 
