@@ -43,7 +43,7 @@ These audit rules log **reconnaissance activity**:
 ![Start Auditd](screenshots/auditd1.png)
 >💡 *Allows easy review of what system activities are being logged by auditd.*
 
-![Auditd custom rules](screenshots/Audit_Rules–Lines 306–311.png)
+![Auditd custom rules](screenshots/Audit_Rules–Lines_306–311.png)
 >💡 *These rules watch for attacker behavior using common recon tools or files.*
 ---
 
