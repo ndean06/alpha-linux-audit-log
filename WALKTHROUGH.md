@@ -40,7 +40,7 @@ These audit rules log **reconnaissance activity**:
 | 306–309    | Executables  | `x` (execute) | Monitor recon commands (e.g., `id`) |
 | 310–311    | Config Files | `r` (read)    | Monitor reads of `/etc/issue`, etc. |
 
-![Start Server Containers](screenshots/auditd.png)
+![Start Server Containers](screenshots/auditd1.png)
 >💡 *Allows easy review of what system activities are being logged by auditd.*
 
 ---
