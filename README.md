@@ -84,7 +84,3 @@ alpha-linux-audit-log/
 
 ---
 
-**Status**: Completed
-**Lab Source**: SANS SEC401 – Lab 6.3
-
-Feel free to fork or use this structure to build your own forensic investigations!
