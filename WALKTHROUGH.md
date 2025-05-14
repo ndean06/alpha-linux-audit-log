@@ -43,6 +43,8 @@ These audit rules log **reconnaissance activity**:
 ![Start Server Containers](screenshots/auditd1.png)
 >💡 *Allows easy review of what system activities are being logged by auditd.*
 
+![Start Server Containers](screenshots/Audit_Rules – Lines 306–311.png)
+>💡 *These rules watch for attacker behavior using common recon tools or files.*
 ---
 
 ## 🧭 Task 3: Review the Audit Log
