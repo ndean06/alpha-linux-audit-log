@@ -76,7 +76,7 @@ View activity tagged with rules like `recon`, `sbin_susp`, etc.
 gedit audit.log &
 ```
 
-Useful for inspecting structure: each event may span multiple `type=` lines with a shared `event ID`.
+Useful for inspecting structure: each event may span multiple `type=` lines with a shared `event ID`. In addition, some fields (like proctitle) in audit logs look hard to read — they’re in hex format.
 
 ![raw audit log](screenshots/raw_audit_log.png)
 >💡 *For viewing the raw structure of logged events and identifying specific entries.*
