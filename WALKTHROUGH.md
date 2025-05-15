@@ -47,7 +47,7 @@ These audit rules log **reconnaissance activity**:
 >💡 *These rules watch for attacker behavior using common recon tools or files.*
 ---
 
-## 🧭 Task 3: Review the Audit Log
+## 🧭 Task 3: Review the Audit Log from Compromised host.
 
 ### 3️⃣ Summary of Captured Events
 
