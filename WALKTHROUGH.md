@@ -78,8 +78,8 @@ gedit audit.log &
 
 Useful for inspecting structure: each event may span multiple `type=` lines with a shared `event ID`.
 
-![rwa audit log](screenshots/raw_audit_log.png)
->💡 *Useful for seeing the raw structure of logged events and identifying specific entries.*
+![raw audit log](screenshots/raw_audit_log.png)
+>💡 *For viewing the raw structure of logged events and identifying specific entries.*
 
 ---
 
