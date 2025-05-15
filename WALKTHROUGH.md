@@ -55,10 +55,10 @@ These audit rules log **reconnaissance activity**:
 aureport --input ./audit.log --summary
 ```
 ![Gen audit log summary report](screenshots/review_audit_log.png)
->💡 *Useful for getting a quick overview of what kinds of system events were captured (Displays counts of logins, executed commands, etc.).*
+>💡 *Useful for getting a quick overview of what kinds of system events were captured (Displays counts of logins, executed commands, etc.*
 
 
-### 4️⃣ Summary Grouped by Key
+### 4️⃣ Summary Report Grouped by Key
 
 ```bash
 aureport --input audit.log --key --summary
@@ -66,7 +66,9 @@ aureport --input audit.log --key --summary
 
 View activity tagged with rules like `recon`, `sbin_susp`, etc.
 
-📸 *(Insert summary screenshots here)*
+![summary report by key](screenshots/summary_by_key.png)
+>💡 *Shows which types of activity (like recon, execution, etc.) occurred most frequently.*
+
 
 ### 5️⃣ View Raw Audit Log
 
