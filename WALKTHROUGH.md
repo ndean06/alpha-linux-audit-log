@@ -106,15 +106,24 @@ First, view it **without** `-i` to see the raw data. Then re-run **with** `-i` t
 ```bash
 ausearch --input audit.log -k sbin_susp
 ```
+![ausearch](screenshots/ausearch.png)
+>💡 *Shows raw entries for potentially suspicious privileged binary usage.*
+>
+>💡 *Results show 5 different records for Event ID 152873. The 1st record is the type PROCTITLE and the proctitle field which is hex-encoded.*
 
 #### Decoded Output
 
 ```bash
 ausearch --input audit.log -k sbin_susp -i
 ```
+![ausearch](screenshots/ausearch_i_flag.png)
+>💡 *Searches for events tagged sbin_susp and decodes hex + ID fields for easier readability.*
+>
+>💡 *proctitle is now readable*
 
 * `-i` interprets hex, timestamps, UIDs
 * Example output: `timeout 1 tcpdump`
+
 
 📸 *(Insert before/after ausearch comparison)*
 
