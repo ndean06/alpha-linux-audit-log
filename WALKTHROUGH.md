@@ -83,15 +83,14 @@ Useful for inspecting structure: each event may span multiple `type=` lines with
 
 ---
 
-### 6️⃣ Decode a Hex proctitle
+### 6️⃣ Decode a Hex proctitle w/ xxd or Cyberchef
 
 ```bash
 echo -n "<hex_value>" | xxd -r -p ; echo
 ```
 
-Reveals the real command behind a suspicious `proctitle` log field.
-
-📸 *(Insert screenshot here)*
+![cyberchef decode](screenshots/cyberchef.png)
+>💡 *Reveals the real command behind a suspicious `proctitle` log field.*
 
 ---
 
