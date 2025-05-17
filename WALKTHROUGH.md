@@ -95,6 +95,11 @@ echo -n "<hex_value>" | xxd -r -p ; echo
 ---
 
 ### 7️⃣ Use ausearch to Investigate
+Manually converting hex to ASCII is tedious, but `ausearch -i` can do it for you by auto-decoding values and resolving IDs.
+
+Let’s focus on a single event tagged with `sbin_susp` (suspicious use of privileged system binaries).
+
+First, view it **without** `-i` to see the raw data. Then re-run **with** `-i` to compare decoded output.
 
 #### Raw Output
 
