@@ -137,19 +137,21 @@ zircolite --events audit.log --ruleset rules/alpha_rules_linux.json --auditd
 >💡 *Used for local threat detection auditd tells Zircolite how to parse the log format.*
 >
 >📁 *Output saved to `detected_events.json`*
+>
+>🗝️ *Key detections: 177× Webshell Remote Command Execution and 11× System Info Discovery
 
 ### 9️⃣ Review Sigma Detection Results
 
 ```bash
 gedit detected_events.json &
+
 ```
+#### First Flagged Event
 
-Key detections:
+![gedit](screenshots/gedit_detected_events1.png)
 
-* 177× Webshell Remote Command Execution
-* 11× System Info Discovery
-
-![gedit](screenshots/gedit_detected_events.png)
+#### Second Flagged Event
+![gedit](screenshots/gedit_detected_events1.png)
 >💡 *Opens the JSON file containing matched Sigma rule detections in Gedit.*
 >
 >💡 *What Happened? A script named linpeas.sh was executed.*
