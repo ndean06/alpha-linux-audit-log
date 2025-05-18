@@ -149,7 +149,12 @@ Key detections:
 * 177× Webshell Remote Command Execution
 * 11× System Info Discovery
 
-📸 *(Insert screenshot of detection output)*
+![gedit](screenshots/gedit_detected_events.png)
+>💡 *Opens the JSON file containing matched Sigma rule detections in Gedit.*
+>
+>💡 *What Happened? A script named linpeas.sh was executed.*
+>
+>💡 *How do we know? Event 1 shows a process launching*
 
 ---
 
