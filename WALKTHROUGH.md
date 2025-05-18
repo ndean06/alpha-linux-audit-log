@@ -149,14 +149,24 @@ gedit detected_events.json &
 #### First Flagged Event
 
 ![gedit](screenshots/gedit_detected_events1.png)
+>💡 *This event indicates that a shell (/usr/bin/dash) was executed, and its parent was process 29453*
 
 #### Second Flagged Event
-![gedit](screenshots/gedit_detected_events1.png)
->💡 *Opens the JSON file containing matched Sigma rule detections in Gedit.*
+![gedit](screenshots/gedit_detected_events2.png)
+>💡 *This confirms that the sh shell (PID 138330) launched linpeas.sh, showing a clear escalation of activity*
 >
->💡 *What Happened? A script named linpeas.sh was executed.*
->
->💡 *How do we know? Event 1 shows a process launching*
+>💡 *Together with the first flagged event, this provides a parent-child chain: → 29453 (initial payload) → sh → linpeas.sh
+
+### ❓ What Happened?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A script named `linpeas.sh` was executed — a common recon tool used after compromise.
+
+### 🔎 How do we Know
+
+- **Event 1** shows a process (`sh`) launching with **PID `138330`** and **parent PID `29453`**.  
+  This suggests a shell was spawned, possibly via a webshell or command injection.
+
+- **Event 2** shows the same **PID `138330`** now acting as the **parent** of a new process — `linpeas.sh`,  
+  confirming that the attacker used the shell to run the recon script.
 
 ---
 
