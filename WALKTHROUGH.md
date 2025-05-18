@@ -124,9 +124,6 @@ ausearch --input audit.log -k sbin_susp -i
 * `-i` interprets hex, timestamps, UIDs
 * Example output: `timeout 1 tcpdump`
 
-
-📸 *(Insert before/after ausearch comparison)*
-
 ---
 
 ## 🧭 Task 4: Detection with Sigma Rules
