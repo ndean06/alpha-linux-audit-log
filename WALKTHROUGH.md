@@ -133,7 +133,7 @@ ausearch --input audit.log -k sbin_susp -i
 ```bash
 zircolite --events audit.log --ruleset rules/alpha_rules_linux.json --auditd
 ```
-![ausearch](screenshots/zircolite.png)
+![ausearch](screenshots/zircolite1.png)
 >💡 *Used for local threat detection auditd tells Zircolite how to parse the log format.*
 >
 >📁 *Output saved to `detected_events.json`*
