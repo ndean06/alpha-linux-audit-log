@@ -273,6 +273,10 @@ ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | grep rpivot
 ausearch --input audit.log -ui 33 -k recon -i | grep -oP proctitle=.*
 ```
 
+Shows recon commands executed by www-data that match the "recon" Sigma rule tag.
+
+![ausearch](screenshots/ausearch_recon.png)
+>💡 *Look for things that show signs of system discovery, like hostname, cat /etc/issue, or uname -a .*
 
 ## 🧭 Task 6: Compare with Pre-Intrusion Log
 
