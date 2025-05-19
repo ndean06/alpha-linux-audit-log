@@ -216,13 +216,14 @@ ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | sort | uniq -c | 
 ```bash
 gedit all-www-data-processes.txt &
 ```
-![ausearch](screenshots/ausearch_pid.png)
->💡 *Good for spotting unusual or rarely used commands executed by the web server.*
+At the Top: uncommon commands prefixed with a `1` (e.g., `linpeas.sh`)*
 
-* Top: uncommon commands (e.g., `linpeas.sh`)
-* Bottom: frequent commands (e.g., `client.py`, `python3`)
+![gedit](screenshots/gedit_all_www_data.png)
 
-📸 *(Insert screenshot highlighting rare vs frequent entries)*
+
+At the Bottom: frequent commands (e.g., `client.py`, `python3`)
+
+![gedit](screenshots/gedit_all_www_data.png)
 
 ---
 
