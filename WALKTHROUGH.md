@@ -208,6 +208,8 @@ Investigate suspicious process trees from PID 29453 → leads to `client.py`
 ```bash
 ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | sort | uniq -c | sort -n > all-www-data-processes.txt
 ```
+![ausearch](screenshots/ausearch_list_all_commands.png)
+>💡 *Good for spotting unusual or rarely used commands executed by the web server.*
 
 ### 📝 Open Summary File
 
