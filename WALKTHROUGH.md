@@ -170,13 +170,19 @@ gedit detected_events.json &
 
 ---
 
-### 🔍 Follow up with ausearch
+### 🔍 Search for linpeas activity in logs with ausearch 
 
 ```bash
 ausearch --input audit.log -i | grep linpeas
 ```
-![ausearch](screenshots/gedit_detected_events2.png)
->💡 *This confirms that the sh shell (PID 138330) launched linpeas.sh, showing a clear escalation of activity*
+![ausearch](screenshots/ausearch_linpeas.png)
+>💡 *Searches interpreted audit log entries for any mention of linpeas.sh or related activity.*
+>
+>💡 *Observed EXECVE and PROCTITLE events indicating that sh executed `./linpeas.sh.` (also reviewed in: `gedit detected_events.json`)*
+>
+>💡 *Which revealed the parent process had: parent process ID: `29453`*
+
+### 🔍 Investigate parent process with ausearch
 
 ```bash
 ausearch --input audit.log -p 29453 -i
