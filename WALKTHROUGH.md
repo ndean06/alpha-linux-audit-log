@@ -248,6 +248,31 @@ It is used by attackers to pivot into internal networks by creating a tunnel fro
 
 ### 🔎 Filtering for Attacker Activity as www-data
 
+Filter string to see any related commands executed on the server by user www-data
+
+```bash
+ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | grep rpivot
+```
+
+![ausearch](screenshots/ausearch_rpivot.png)
+>💡 *Filters audit logs for commands run by www-data that include the word rpivot.*
+>
+>💡 *rpivot is a known pivoting/backconnect tool sign of post-exploitation.*
+>
+>💡 *Suspicious GitHub Activity The Apache service account (`www-data`) cloned a GitHub repo very unusual.
+>
+>💡 *The repo: rpivot2*
+>
+>💡 *A Python based SOCKS proxy tool used to forward traffic through one host to another (pivoting)*
+>
+>💡 *Not normal for a Web server. Likely part of an lateral movement*
+
+### 🔎 Identify recon activity by www-data user
+
+```bash
+ausearch --input audit.log -ui 33 -k recon -i | grep -oP proctitle=.*
+```
+
 
 ## 🧭 Task 6: Compare with Pre-Intrusion Log
 
