@@ -175,6 +175,8 @@ gedit detected_events.json &
 ```bash
 ausearch --input audit.log -i | grep linpeas
 ```
+![ausearch](screenshots/gedit_detected_events2.png)
+>💡 *This confirms that the sh shell (PID 138330) launched linpeas.sh, showing a clear escalation of activity*
 
 ```bash
 ausearch --input audit.log -p 29453 -i
