@@ -190,11 +190,18 @@ ausearch --input audit.log -p 29453 -i
 
 Investigate suspicious process trees from PID 29453 → leads to `client.py`
 
-📸 *(Insert screenshots showing parent-child process relationship)*
+![ausearch](screenshots/ausearch_pid.png)
+>💡 *Executable: `/usr/sbin/apache2`*
+>
+>💡 *Command Line: `apache2 -k start`*
+>
+>💡 UID/GID: `www-data` (typical of a web server process)*
+>
+>💡 *These audit entries confirm that the parent is the web server process `/usr/sbin/apache2`*
 
 ---
 
-## 🧭 Task 5: Analyze Command Frequency by `www-data`
+## 🧭 Task 5: Analyze Command Frequency by `www-data` user account
 
 ### 🔢 List All Commands by Apache User
 
@@ -207,6 +214,8 @@ ausearch --input audit.log -ui 33 -i | grep -oP proctitle=.* | sort | uniq -c | 
 ```bash
 gedit all-www-data-processes.txt &
 ```
+![ausearch](screenshots/ausearch_pid.png)
+>💡 *Good for spotting unusual or rarely used commands executed by the web server.*
 
 * Top: uncommon commands (e.g., `linpeas.sh`)
 * Bottom: frequent commands (e.g., `client.py`, `python3`)
