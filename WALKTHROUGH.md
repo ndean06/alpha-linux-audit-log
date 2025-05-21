@@ -349,6 +349,7 @@ gedit sysmon4linux.log &
 ```bash
 zcat syslog | grep "20:26:25.230" | grep 61051
 ```
+
 #### Locate raw Sysmon XML event
 ![gedit](screenshots/sysmon4linux.png)
 >💡 *Searches the compressed syslog file for the raw XML event using a timestamp and process ID.*
@@ -360,16 +361,17 @@ Search for `client.py` activity:
 ```bash
 grep -B 10 "client\.py" sysmon4linux.log
 ```
-
-📸 *(Insert screenshot showing Sysmon event block)*
-
+![gedit](screenshots/client_py.png)
+>💡 *Searches the compressed syslog file for the raw XML event using a timestamp and process ID.*
+> 
+>💡 *Confirming when rpivot2 was run and what triggered it by looking for timestamps and parent PIDs.
 
 
 ---
 
 ## 🧭 Final Step: Confirm Network Pivoting
 
-### 🧪 Filter RDP Traffic from NetFlow
+### 🧪 Extract RDP (TCP/3389) netflow events
 
 ```bash
 head -1 netflow-data/pcap-derived-netflow.txt > netflow-rdp.txt
