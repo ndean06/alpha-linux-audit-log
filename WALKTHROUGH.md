@@ -340,7 +340,7 @@ gedit all-www-data-processes.txt &
 gedit sysmon4linux.log &
 ```
 #### Open converted Sysmon for Linux log file in Gedit for easier analysis.
-![gedit](screenshots/gedit_all_www_data2.png)
+![gedit](screenshots/sysmon4linux.png)
 >💡 *large File — allow time to load. Shows detailed security-related events in readable format.*
 >
 
