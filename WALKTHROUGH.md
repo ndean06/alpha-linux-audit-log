@@ -349,6 +349,11 @@ gedit sysmon4linux.log &
 ```bash
 zcat syslog | grep "20:26:25.230" | grep 61051
 ```
+#### Locate raw Sysmon XML event
+![gedit](screenshots/sysmon4linux.png)
+>💡 *Searches the compressed syslog file for the raw XML event using a timestamp and process ID.*
+>
+>💡 *Use this to find the original event structure as written by Sysmon for Linux.*
 
 Search for `client.py` activity:
 
