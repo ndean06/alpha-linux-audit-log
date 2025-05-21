@@ -279,6 +279,7 @@ Shows recon commands executed by www-data that match the "recon" Sigma rule tag.
 >💡 *Look for things that show signs of system discovery, like hostname, cat /etc/issue, or uname -a .*
 
 ## 🧭 Task 6: Compare with Pre-Intrusion Log
+Analyzing an older audit log (before the attack) to compare normal behavior.
 
 ### 📊 Summary of Clean Log
 
