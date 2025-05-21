@@ -373,13 +373,21 @@ grep -B 10 "client\.py" sysmon4linux.log
 
 ### 🧪 Extract RDP (TCP/3389) netflow events
 
+Extract
+
 ```bash
 head -1 netflow-data/pcap-derived-netflow.txt > netflow-rdp.txt
 
 grep ":3389 " netflow-data/pcap-derived-netflow.txt | grep TCP >> netflow-rdp.txt
 ```
+![gedit](screenshots/extract_rdp.png)
+>💡 *created netflow-rdp.txt — a filtered file showing only RDP-related flows.*
+>
+>💡 *Helps identify any RDP traffic sent from the compromised host & possible lateral movement or data access.*
 
 ### 📖 Review Filtered Connections
+
+View
 
 ```bash
 gedit netflow-rdp.txt &
