@@ -392,15 +392,17 @@ View
 ```bash
 gedit netflow-rdp.txt &
 ```
+![gedit](screenshots/filtered_rdp.png)
+>💡 *Opens the filtered file containing only RDP-related (TCP/3389) netflow records.*
+>
+>💡 *Check timestamps and IPs to see if the compromised server initiated RDP sessions.*
 
 **Findings:**
 
-* Source: `10.130.8.94` (Linux web server)
-* Destination: `10.130.9.42` (Windows file server)
-* Protocol: TCP/3389 (RDP)
+* Source: `10.130.8.94` (Linux web server) - Attacker
+* Destination: `10.130.9.42` (Windows file server) - Target
+* Protocol: TCP/3389 (RDP) - used by the attacker to pivot into the internal Windows file server.
 * Observation: Large data transfer → likely exfiltration
-
-📸 *(Insert NetFlow screenshot)*
 
 ---
 
