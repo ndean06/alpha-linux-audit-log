@@ -339,6 +339,16 @@ gedit all-www-data-processes.txt &
 ```bash
 gedit sysmon4linux.log &
 ```
+#### Open converted Sysmon for Linux log file in Gedit for easier analysis.
+![gedit](screenshots/gedit_all_www_data2.png)
+>💡 *large File — allow time to load. Shows detailed security-related events in readable format.*
+>
+
+### 📡 Search Raw XML in Syslog
+
+```bash
+zcat syslog | grep "20:26:25.230" | grep 61051
+```
 
 Search for `client.py` activity:
 
@@ -348,11 +358,7 @@ grep -B 10 "client\.py" sysmon4linux.log
 
 📸 *(Insert screenshot showing Sysmon event block)*
 
-### 📡 Search Raw XML in Syslog
 
-```bash
-zcat syslog | grep "<timestamp>" | grep <PID>
-```
 
 ---
 
