@@ -286,7 +286,19 @@ Analyzing an older audit log (before the attack) to compare normal behavior.
 ```bash
 aureport --input archive-audit.log --summary
 ```
+Pre-Intrusion
+![aureport](screenshots/aureport_pre-intrusion.png)
+>💡 *Helps establish a baseline of normal activity before the intrusion.*
+>
+>💡 *43,134 events over ~34 hours*
 
+Post-Intrusion (From earlier)
+![aureport](screenshots/review_audit_log.png)
+>💡 *41,020 events over ~17.5 hours*
+>
+>💡 *Similar volume, but much more activity in less time post-compromise = Suspicious.*
+
+ 
 ### 🔍 Analyze www-data Usage (Pre-Attack)
 
 ```bash
