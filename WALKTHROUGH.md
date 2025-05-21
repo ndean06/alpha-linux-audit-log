@@ -286,13 +286,13 @@ Analyzing an older audit log (before the attack) to compare normal behavior.
 ```bash
 aureport --input archive-audit.log --summary
 ```
-Pre-Intrusion
+### Pre-Intrusion
 ![aureport](screenshots/aureport_pre-intrusion.png)
 >💡 *Helps establish a baseline of normal activity before the intrusion.*
 >
 >💡 *43,134 events over ~34 hours*
 
-Post-Intrusion (From earlier)
+### Post-Intrusion (From earlier)
 ![aureport](screenshots/review_audit_log.png)
 >💡 *41,020 events over ~17.5 hours*
 >
@@ -301,16 +301,36 @@ Post-Intrusion (From earlier)
  
 ### 🔍 Analyze www-data Usage (Pre-Attack)
 
+#### Pre-Attack
 ```bash
 ausearch --input archive-audit.log -ui 33 -i | grep -oP proctitle=.* | sort | uniq -c | sort -n
 ```
+![aureport](screenshots/analyze_www-data.png)
+>💡 *Lists and counts each unique command executed by www-data (UID 33) during the clean 34-hour period.*
+>
+>📄 *Normal activity: only `/usr/sbin/apache2` run 202 times*
+>
+>📄 *No recon or suspicious tools observed*
 
-📄 Normal activity: only `/usr/sbin/apache2` run 202 times
-📄 No recon or suspicious tools observed
+#### Post-Attack
+```bash
+gedit all-www-data-processes.txt &
+```
+![gedit](screenshots/gedit_all_www_data.png)
 
-📸 *(Insert comparison screenshot)*
+![gedit](screenshots/gedit_all_www_data2.png)
+>💡 * A ton of unusual or rarely used commands executed by the web server.*
 
 ---
+| **Category**                  | **Pre-Intrusion (`archive-audit.log`)**                | **Post-Intrusion (`audit.log`)**                                        |
+|------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------|
+| **Log Duration**             | ~34 hours                                              | ~17.5 hours                                                             |
+| **Total Events**             | 43,134 events                                          | 41,020 events                                                           |
+| **Commands Run by www-data** | Only `/usr/sbin/apache2`                               | Dozens, including `bash`, `linpeas.sh`, `client.py`, `rpivot2`, `git clone`, etc. |
+| **# of www-data Commands**   | 202 executions (all Apache)                            | Many unique commands, several executed multiple times                  |
+| **Recon/Attack Tools**       | None                                                   | `linpeas.sh`, `hostname`, `cat /etc/issue`, etc.                        |
+| **Indicators of Compromise** | None                                                   | Remote shell behavior, GitHub repo cloning, pivot tools                |
+
 
 ## 🧭 Bonus: Sysmon for Linux + Network Logs
 
